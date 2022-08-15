@@ -28,7 +28,7 @@ public class AuthTest {
         $("[data-test-id='login'] input").setValue(registeredUser.getLogin());
         $("[data-test-id='password'] input").setValue(registeredUser.getPassword());
         $x("//span[@class='button__text']").click();
-        $("[class='heading heading_size_l heading_theme_alfa-on-white']").shouldHave(Condition.exactText("Личный кабинет"),
+        $x("//*[contains(text(),'Личный кабинет')]").shouldHave(Condition.exactText("Личный кабинет"),
                 Duration.ofSeconds(15));
     }
 
